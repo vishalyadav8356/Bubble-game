@@ -1,0 +1,120 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Gilroy', sans-serif;
+}
+
+html, body {
+   height: 100%;
+   width: 100%;
+}
+
+#main {
+   height: 100%;
+   width: 100%;
+   background-color: #f0f4f8;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#frame {
+   height: 80%;
+   width: 80%;
+   max-width: 1200px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#tframe {
+   height: 100px;
+   width: 100%;
+   background-color: #3b5998;
+   color: white;
+   padding: 0 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+
+.elem {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+.box {
+   padding: 10px;
+   background-color: #ffffff;
+   border-radius: 5px;
+   color: #3b5998;
+   font-weight: 600;
+   font-size: 25px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#bframe {
+   width: 100%;
+   height: calc(100% - 100px);
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+.bubble {
+   height: 60px;
+   width: 60px;
+   background-color: #3b5998;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-weight: 400;
+   transition: background-color 0.3s;
+}
+
+.bubble:hover {
+   background-color: #2d4373;
+   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+   #frame {
+       height: 90%;
+       width: 90%;
+   }
+
+   #tframe {
+       height: auto;
+       padding: 10px;
+       justify-content: center;
+   }
+
+   .elem {
+       flex-direction: column;
+       gap: 10px;
+   }
+
+   .box {
+       font-size: 20px;
+   }
+
+   #bframe {
+       flex-direction: column;
+       height: auto;
+   }
+
+   .bubble {
+       height: 50px;
+       width: 50px;
+   }
+}
